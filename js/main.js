@@ -94,10 +94,18 @@ function cardTemplate(card, index) {
     <button class="card" type="button" role="gridcell" data-index="${index}"
       aria-label="Hidden memory card ${index + 1}" aria-pressed="false">
       <span class="card-inner">
-        <span class="card-face card-back" aria-hidden="true">
-          <span class="flag-mark">★</span>
-          <span class="shark">🦈</span>
-          <small>2026</small>
+       <span class="card-face card-back" aria-hidden="true">
+          <img
+            src="assets/images/logos/fcf-logo.png"
+            alt="FCF Logo"
+            class="card-logo">
+
+          <h3 class="card-back-title">TUBARÕES AZUIS</h3>
+
+          <p class="card-back-subtitle">MEMORY GAME</p>
+
+          <span class="card-back-year">FIFA 2026</span>
+
         </span>
         <span class="card-face card-front">
           <span class="shirt-number">${card.number}</span>
