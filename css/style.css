@@ -238,6 +238,8 @@ button, select { font: inherit; }
   backface-visibility: hidden;
   border-radius: 14px;
   overflow: hidden;
+
+box-shadow:  
   0 15px 35px rgba(0,0,0,.35),
   0 0 15px rgba(247,209,22,.08);
 }
