@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Cabo Verde Blue Sharks memory game inspired by the 2026 national team." />
+  <title>Tubarões Azuis Memory Game 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="app">
+    <header class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <img src="assets/images/logos/fcf-logo.png"
+             alt="FCF Logo"
+             class="hero-logo">
+
+        <h1>TUBARÕES AZUIS</h1>
+
+        <h2>MEMORY GAME</h2>
+
+        <p>FIFA WORLD CUP 2026</p>
+
+    </div>
+</header>
+
+    <section class="toolbar" aria-label="Game controls">
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty">
+        <option value="6">Easy · 6 pairs</option>
+        <option value="8">Medium · 8 pairs</option>
+        <option value="10" selected>World Cup · 10 pairs</option>
+      </select>
+      <button id="restart" type="button">↻ New game</button>
+    </section>
+
+    <section class="score-panel" aria-label="Game statistics">
+      <div class="stat"><span>Moves</span><strong id="moves">0</strong></div>
+      <div class="stat"><span>Pairs</span><strong id="pairs">0/10</strong></div>
+      <div class="stat"><span>Time</span><strong id="timer">0:00</strong></div>
+      <div class="stat"><span>Best</span><strong id="best">—</strong></div>
+    </section>
+
+    <div id="stars" aria-label="Five star rating">⭐⭐⭐⭐⭐</div>
+
+    <section id="wrap" aria-label="Memory game area">
+      <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+      <div id="board" role="grid" aria-label="Memory cards"></div>
+
+      <div id="overlay" role="dialog" aria-modal="true" aria-labelledby="win-title">
+        <div id="modal">
+          <div class="trophy" aria-hidden="true">🏆</div>
+          <p class="eyebrow">FULL TIME</p>
+          <h2 id="win-title">Parabéns!</h2>
+          <p class="sub">You matched every Tubarão Azul.</p>
+          <div class="mstats">
+            <div class="mstat"><span>Moves</span><strong id="m-moves">—</strong></div>
+            <div class="mstat"><span>Time</span><strong id="m-time">—</strong></div>
+            <div class="mstat"><span>Stars</span><strong id="m-stars">—</strong></div>
+            <div class="mstat"><span>Rating</span><strong id="m-rating">—</strong></div>
+          </div>
+          <button id="play-again" type="button">Play again</button>
+        </div>
+      </div>
+    </section>
+
+    <p id="status" class="sr-only" aria-live="polite"></p>
+    <footer>Fan-made student project · Cabo Verde National Team</footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
