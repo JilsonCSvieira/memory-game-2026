@@ -109,10 +109,12 @@ function cardTemplate(card, index) {
         </span>
         <span class="card-face card-front">
           <span class="shirt-number">${card.number}</span>
-          <span class="avatar">${card.initials}</span>
-          <strong>${card.name}</strong>
-          <small>${card.position}</small>
-        </span>
+          <span class="avatar">
+            <img
+              src="assets/images/players/${card.id}.webp"
+              alt="${card.name}">
+          </span>
+        </span> 
       </span>
     </button>`;
 }

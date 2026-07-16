@@ -320,18 +320,29 @@ box-shadow:
   background: linear-gradient(160deg, #fff, #eef5ff);
 }
 .shirt-number { position: absolute; top: 7px; right: 9px; color: var(--red); font-weight: 900; font-size: .9rem; }
-.avatar {
-  display: grid;
-  place-items: center;
-  width: clamp(42px, 7vw, 62px);
-  aspect-ratio: 1;
-  margin-bottom: 7px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: clamp(.9rem, 2vw, 1.2rem);
-  font-weight: 900;
-  background: linear-gradient(145deg, var(--blue), #0074d9);
-  border: 3px solid var(--yellow);
+.avatar{
+
+    width:100%;
+
+    height:145px;
+
+    margin-bottom:10px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    background:transparent;
+
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 .card-front strong { font-size: clamp(.66rem, 1.55vw, .92rem); line-height: 1.12; }
 .card-front small { margin-top: 4px; color: var(--muted); font-size: clamp(.58rem, 1.2vw, .74rem); }
