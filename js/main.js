@@ -93,8 +93,10 @@ function cardTemplate(card, index) {
   return `
     <button class="card" type="button" role="gridcell" data-index="${index}"
       aria-label="Hidden memory card ${index + 1}" aria-pressed="false">
+
       <span class="card-inner">
-       <span class="card-face card-back" aria-hidden="true">
+
+        <span class="card-face card-back" aria-hidden="true">
           <img
             src="assets/images/logos/fcf-logo.png"
             alt="FCF Logo"
@@ -105,16 +107,24 @@ function cardTemplate(card, index) {
           <p class="card-back-subtitle">MEMORY GAME</p>
 
           <span class="card-back-year">FIFA 2026</span>
-
         </span>
+
         <span class="card-face card-front">
           <span class="shirt-number">${card.number}</span>
+
+          <span class="country-flag">
+            <img
+              src="assets/images/logos/cabo-verde-flag.png"
+              alt="Cape Verde Flag">
+          </span>
+
           <span class="avatar">
             <img
               src="assets/images/players/${card.id}.${card.id === 'pico-lopes' ? 'jpg' : 'webp'}"
               alt="${card.name}">
           </span>
-        </span> 
+        </span>
+
       </span>
     </button>`;
 }
