@@ -344,7 +344,23 @@ box-shadow:
   object-position: top center;
   display: block;
 }
-.card-front strong { font-size: clamp(.66rem, 1.55vw, .92rem); line-height: 1.12; }
+.card-front strong{
+
+    display:block;
+
+    margin-top:4px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    color:#002b5c;
+
+}
 .card-front small { margin-top: 4px; color: var(--muted); font-size: clamp(.58rem, 1.2vw, .74rem); }
 .card.matched .card-front { background: linear-gradient(160deg, #fff9cf, #e9f7ef); border-color: var(--yellow); }
 .card.matched .avatar { background: #16864b; }
@@ -381,4 +397,31 @@ footer { padding: 22px 0 4px; color: rgba(255,255,255,.68); text-align: center; 
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
+.close-modal-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    width:38px;
+    height:38px;
+
+    border:none;
+    border-radius:50%;
+
+    background:transparent;
+    color:#666;
+
+    font-size:28px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.close-modal-btn:hover{
+    background:#f2f2f2;
+    color:#0a3d91;
 }

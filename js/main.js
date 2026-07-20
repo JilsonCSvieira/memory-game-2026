@@ -111,7 +111,7 @@ function cardTemplate(card, index) {
           <span class="shirt-number">${card.number}</span>
           <span class="avatar">
             <img
-              src="assets/images/players/${card.id}.webp"
+              src="assets/images/players/${card.id}.${card.id === 'pico-lopes' ? 'jpg' : 'webp'}"
               alt="${card.name}">
           </span>
         </span> 
@@ -284,6 +284,10 @@ $('#difficulty').addEventListener('change', restartGame);
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && $('#overlay').classList.contains('show')) restartGame();
+});
+
+$('#closeVictoryModal').addEventListener('click', () => {
+  $('#overlay').classList.remove('show');
 });
 
 restartGame();
