@@ -397,85 +397,80 @@ box-shadow:
 footer { padding: 22px 0 4px; color: rgba(255,255,255,.68); text-align: center; font-size: .78rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-@media (max-width: 650px) {
+@media (max-width:650px){
 
-  #app{
-    width:calc(100% - 16px);
-    padding-top:14px;
-  }
+    #app{
+        width:calc(100% - 12px);
+        padding-top:10px;
+    }
 
-  .toolbar{
-    flex-wrap:wrap;
-    gap:10px;
-  }
+    .toolbar{
+        padding:8px;
+        gap:8px;
+        flex-wrap:wrap;
+    }
 
-  .score-panel{
-    grid-template-columns:repeat(2,1fr);
-    gap:0;
-  }
+    .toolbar label{display:none;}
 
-  .stat{
-    padding:12px 8px;
-  }
+    .toolbar select,
+    .toolbar button{
+        flex:1;
+        min-width:140px;
+        padding:8px 10px;
+        font-size:.85rem;
+    }
 
-  .stat h3{
-    font-size:.82rem;
-  }
+    .score-panel{grid-template-columns:repeat(2,1fr);}
 
-  .stat-value{
-    font-size:1.8rem;
-  }
+    .stat{padding:8px 4px;}
 
-  .stat:nth-child(2){
-    border-right:0;
-  }
+    .stat span{font-size:.60rem;letter-spacing:.05em;}
 
-  .stat:nth-child(-n+2){
-    border-bottom:1px solid var(--border);
-  }
+    .stat strong{font-size:1.15rem;line-height:1;}
 
-  #board,
-  #board.pairs-6,
-  #board.pairs-8,
-  #board.pairs-10{
-    grid-template-columns:repeat(4,1fr);
-    gap:8px;
-  }
+    .stat:nth-child(2){border-right:0;}
 
-  .card{
-    aspect-ratio:0.67;
-    border-radius:10px;
-  }
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--border);}
 
-  .card-face{
-    border-radius:10px;
-  }
+    #stars{margin:8px 0;font-size:1.1rem;letter-spacing:2px;}
 
-  .card-front{
-    padding:4px;
-  }
+    #board,
+    #board.pairs-6,
+    #board.pairs-8,
+    #board.pairs-10{
+        grid-template-columns:repeat(4,1fr);
+        gap:6px;
+    }
 
-  .avatar{
-    width:72%;
-  }
+    .card{aspect-ratio:.62;border-radius:8px;}
+    .card-face{border-radius:8px;}
+    .card-front{padding:3px;}
 
-  .player-name{
-    font-size:.78rem;
-    height:38px;
-    line-height:1.05;
-  }
+    .avatar{width:58px;height:58px;margin:4px auto;}
 
-  .player-position{
-    font-size:.62rem;
-    letter-spacing:1px;
-  }
+    .country-flag{width:18px;height:12px;top:6px;left:6px;}
 
-  .shirt-number{
-    top:4px;
-    right:6px;
-    font-size:.65rem;
-  }
+    .shirt-number{top:6px;right:6px;font-size:.60rem;}
 
+    .player-name{
+        height:28px;
+        margin-top:4px;
+        padding:0 3px;
+        font-size:.66rem;
+        line-height:1.05;
+    }
+
+    .player-position{
+        margin-top:2px;
+        margin-bottom:4px;
+        font-size:.52rem;
+        letter-spacing:.8px;
+    }
+
+    .card-logo{width:42px;height:42px;margin-bottom:8px;}
+    .card-back-title{font-size:.70rem;}
+    .card-back-subtitle{font-size:.52rem;letter-spacing:2px;}
+    .card-back-year{font-size:.55rem;}
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
