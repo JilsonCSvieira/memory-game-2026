@@ -398,18 +398,85 @@ footer { padding: 22px 0 4px; color: rgba(255,255,255,.68); text-align: center; 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 @media (max-width: 650px) {
-  #app { width: min(100% - 14px, 920px); padding-top: 22px; }
-  .toolbar { flex-wrap: wrap; }
-  .score-panel { grid-template-columns: repeat(2, 1fr); }
-  .stat:nth-child(2) { border-right: 0; }
-  .stat:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
-  #board, #board.pairs-6, #board.pairs-8 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
-  .card { border-radius: 10px; }
-  .card-face { border-radius: 10px; }
-  .card-front { padding: 5px; }
-  .shirt-number { top: 4px; right: 6px; font-size: .68rem; }
-}
 
+  #app{
+    width:calc(100% - 16px);
+    padding-top:14px;
+  }
+
+  .toolbar{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .score-panel{
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+  }
+
+  .stat{
+    padding:12px 8px;
+  }
+
+  .stat h3{
+    font-size:.82rem;
+  }
+
+  .stat-value{
+    font-size:1.8rem;
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat:nth-child(-n+2){
+    border-bottom:1px solid var(--border);
+  }
+
+  #board,
+  #board.pairs-6,
+  #board.pairs-8,
+  #board.pairs-10{
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+  }
+
+  .card{
+    aspect-ratio:0.67;
+    border-radius:10px;
+  }
+
+  .card-face{
+    border-radius:10px;
+  }
+
+  .card-front{
+    padding:4px;
+  }
+
+  .avatar{
+    width:72%;
+  }
+
+  .player-name{
+    font-size:.78rem;
+    height:38px;
+    line-height:1.05;
+  }
+
+  .player-position{
+    font-size:.62rem;
+    letter-spacing:1px;
+  }
+
+  .shirt-number{
+    top:4px;
+    right:6px;
+    font-size:.65rem;
+  }
+
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
