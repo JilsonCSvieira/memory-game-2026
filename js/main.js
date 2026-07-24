@@ -4,14 +4,14 @@ const PLAYER_POOL = [
   { id: 'vozinha', initials: 'VO', name: 'Vozinha', position: 'Goalkeeper', number: '1' },
   { id: 'logan-costa', initials: 'LC', name: 'Logan Costa', position: 'Defender', number: '5' },
   { id: 'pico-lopes', initials: 'PL', name: 'Roberto “Pico” Lopes', position: 'Defender', number: '4' },
-  { id: 'joao-paulo', initials: 'JP', name: 'João Paulo Fernandes', position: 'Defender', number: '3' },
-  { id: 'kevin-pina', initials: 'KP', name: 'Kevin Pina', position: 'Midfielder', number: '16' },
+  { id: 'joao-paulo', initials: 'JP', name: 'João Paulo Fernandes', position: 'Defender', number: '8' },
+  { id: 'kevin-pina', initials: 'KP', name: 'Kevin Pina', position: 'Midfielder', number: '6' },
   { id: 'jamiro', initials: 'JM', name: 'Jamiro Monteiro', position: 'Midfielder', number: '10' },
-  { id: 'deroy', initials: 'DD', name: 'Deroy Duarte', position: 'Midfielder', number: '8' },
+  { id: 'deroy', initials: 'DD', name: 'Deroy Duarte', position: 'Midfielder', number: '14' },
   { id: 'ryan', initials: 'RM', name: 'Ryan Mendes', position: 'Forward', number: '20' },
-  { id: 'dailon', initials: 'DL', name: 'Dailon Livramento', position: 'Forward', number: '21' },
+  { id: 'dailon', initials: 'DL', name: 'Dailon Livramento', position: 'Forward', number: '19' },
   { id: 'jovane', initials: 'JC', name: 'Jovane Cabral', position: 'Forward', number: '7' },
-  { id: 'helio', initials: 'HV', name: 'Hélio Varela', position: 'Forward', number: '11' },
+  { id: 'helio', initials: 'HV', name: 'Hélio Varela', position: 'Forward', number: '26' },
   { id: 'gilson', initials: 'GB', name: 'Gilson Benchimol', position: 'Forward', number: '9' }
 ];
 
@@ -123,6 +123,11 @@ function cardTemplate(card, index) {
               src="assets/images/players/${card.id}.${card.id === 'pico-lopes' ? 'jpg' : 'webp'}"
               alt="${card.name}">
           </span>
+
+          <strong class="player-name">${card.name}</strong>
+
+          <span class="player-position">${card.position}</span>
+
         </span>
 
       </span>

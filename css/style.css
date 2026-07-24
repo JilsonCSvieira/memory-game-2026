@@ -318,31 +318,45 @@ box-shadow:
   text-align: center;
   color: var(--text);
   border: 3px solid #d4af37;
-  background: linear-gradient(160deg, #fff, #eef5ff);
+  overflow:hidden;
+  background: linear-gradient(180deg,#1e5bb8 0%,#0f3f86 45%,#0f3f86 45%,);
 }
+
+.card-front::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-60%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+    transform:skewX(-25deg);
+    pointer-events:none;
+}
+
 .shirt-number { position: absolute; top: 7px; right: 9px; color: var(--red); font-weight: 900; font-size: .9rem; }
 .avatar{
 
-    width:100%;
-
-    height:145px;
-
-    margin-bottom:10px;
-
+    width:110px;
+    height:110px;
+    margin-bottom:18px auto 8px;
+    border-radius:50%;
     overflow:hidden;
-
-    border-radius:12px;
-
-    border:2px solid rgba(255,255,255,.35);
-
-    background:transparent;
+    border:3px solid rgba(255,255,255,.9);
+    background:#fff;
+    box-shadow:0 10px 22px rgba(0,0,0,.35);
+    z-index:2;
 
 }
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
   display: block;
 }
 .card-front strong{
@@ -443,4 +457,58 @@ footer { padding: 22px 0 4px; color: rgba(255,255,255,.68); text-align: center; 
     height:100%;
     object-fit:cover;
     display:block;
+}
+
+.player-name{
+    margin-top:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:48px;
+
+    padding:0 8px;
+
+    font-size:.95rem;
+    font-weight:700;
+    color:#fff;
+    text-align:center;
+    line-height:1.15;
+}
+
+.player-position{
+    display:block;
+    margin-top:4px;
+    margin-bottom:10px;
+    text-align:center;
+    font-size:0.75rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#d4af37;
+}
+
+#difficulty{
+    color:#0b2f63;
+    background:#fff;
+}
+
+#difficulty option{
+    color:#0b2f63;
+    background:#fff;
+}
+
+.card.matched{
+    animation: matchedPop .45s ease;
+}
+@keyframes matchedPop{
+    0%{
+        transform:scale(1);
+    }
+    40%{
+        transform:scale(1.08);
+    }
+    100%{
+        transform:scale(1);
+    }
 }
